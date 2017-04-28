@@ -1,0 +1,33 @@
+[user]
+    name = Nikita Sapunov
+    email = kiton1994@gmail.com
+[core]
+    editor = "vim"
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+[alias]
+    br = branch
+    ci = commit -asS
+    co = checkout
+    gr = grep -n --color --extended-regexp
+    me = merge --no-commit
+    mt = mergetool --no-prompt
+    pa = push --all
+    pt = push --tags
+    rb = rebase --committer-date-is-author-date
+    st = status
+    up = remote update
+    upd = remote update --prune
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[merge]
+    tool = vimdiff
+[mergetool "meld"]
+    cmd = "meld $LOCAL $MERGED $REMOTE"
+[mergetool "vimdiff"]
+    cmd = "vimdiff $LOCAL $MERGED $REMOTE"
+[push]
+    default = matching
+[color]
+    ui = true
