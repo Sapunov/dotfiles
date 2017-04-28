@@ -11,7 +11,12 @@ alias la="ls -lAh"
 alias l="ls"
 alias grep="grep --color=auto "
 
-PS1="\u@\h:\W\$ \[\033[0m\]"
+# Git aliases
+alias gits="git status"
+alias get="git"
+alias got="git"
+
+PS1='\[\e[0;32m\]\u@\h:\W$(__git_ps1 " (%s)") \$ \[\033[0m\]'
 MANPATH=$MANPATH:$HOME/share/man
 
 EDITOR="vim"
